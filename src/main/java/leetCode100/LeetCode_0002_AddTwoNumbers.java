@@ -16,14 +16,13 @@ public class LeetCode_0002_AddTwoNumbers {
      * <p>
      * 你可以假设除了数字 0 之外，这两个数都不会以 0 开头
      * <p>
-     * 来源：力扣（LeetCode）
-     * 链接：https://leetcode.cn/problems/add-two-numbers
-     * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
      * <p>
      * 方法 1 先把链表转换为真实数字然后相加（由于数据类型长度有限，所以这样的方式只能支持到long基础类型）
      * <p>
      * 方法 2 转换容器，把listNode转换成array，生成一个比链表大1的长度array，然后每个index的数字相加，进位往前，依次写大1的array中，最好再把array转换为链表即可
      * （取巧，把链表问题降为到了数组，使用了多的额外空间）
+     *
+     * 方法3 把链表按需排列生成新的链表，保留进位信息，最后再反转链表
      */
     public class ListNode {
         int val;
